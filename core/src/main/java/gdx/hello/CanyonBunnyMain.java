@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import gdx.hello.pybox.PyBoxRender;
 import gdx.hello.util.ScreenshotFactory;
 
 import java.util.Random;
@@ -31,7 +32,9 @@ public class CanyonBunnyMain extends ApplicationAdapter {
         //Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 //        batch.begin();
 //        batch.draw(image, 140, 210);
-        renderLazerBeam();
+//        renderLazerBeam();
+        //PyBoxRender.renderRainbow(batch, shapeRenderer);
+        PyBoxRender.renderArc(batch, shapeRenderer);
 //        batch.end();
 
         if (Gdx.input.isKeyPressed(Input.Keys.F5)) {
@@ -39,7 +42,7 @@ public class CanyonBunnyMain extends ApplicationAdapter {
             create();
         }
 
-        ScreenshotFactory.saveScreenshot(200);
+        //ScreenshotFactory.saveScreenshot(200);
     }
 
     public void renderLazerBeam() {
